@@ -110,34 +110,38 @@ p{
 
 
 @media (max-width: 768px){
-    .container{       
-        margin-block-start: 0;
-        background-color: var(--LightGray);
-    }
     .card-container{   
-        width: 100%;
+        width: 100%;        
     }
-    .card-header{
-        padding-block: 0;
-        
+    .card-header{      
+        width: 100%;       
     }
-    .card-header h1:nth-of-type(1){
-        margin-block-start: 2rem;
+    .card-header--title{
+        font-size: 2rem;         
+    }    
+    .card-header--description{         
+        font-size: 1.5rem;          
     }
-    .card-header h1{       
-        font-size: 2rem;       
-        line-height: 1.5;      
+    .card--light-blue{
+        grid-column: 1/4;
+        grid-row: 1/2;       
     }
-    .card-header p{
-        width: 100%;
-        font-size: 1.3rem;        
+    .card--red{
+        grid-column: 1/4;
+        grid-row: 2/3;
+       
     }
-    .card-grid{        
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);        
+    .card--yellow{
+        grid-column: 1/4;
+        grid-row: 3/4;      
     }
+    .card--dark-blue{
+        grid-column: 1/4;
+        grid-row: 4/5;        
+    }    
+    .card{        
+        width: 95%;     
+    }  
 
 }
-
-
 
