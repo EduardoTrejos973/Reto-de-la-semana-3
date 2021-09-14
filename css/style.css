@@ -19,77 +19,96 @@ html{
 }
 body{
     font-size: 1.5rem;
-    line-height: 1.8;
+    line-height: 1.5;
     font-family: 'Poppins', sans-serif;
 }
-.container{    
+.main-container{    
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;    
     place-items: center;
     background-color: var(--LightGray);
-    margin-block-start: 4rem;
+    
 }
 .card-container{   
-    width: 70%;
-}
-.card-header{
-    padding: 5rem;
+    width: 90%;
+    box-shadow: 3px 3px 10px 0px var(--Grayish);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
-.card-header h1{
-    font-size: 3rem;   
-    font-weight: 200;        
-    margin: 0;    
+.card-header{      
+    width: 45%;
+    margin-top: 3rem; 
 }
-.card-header span{
+.card-header--title{
+    font-size: 3.5rem;   
+    font-weight: 400;        
+    margin: 0;
+    text-align: center;
+    color: var(--DarkBlue);
+}
+span{
+    display: block;
     font-weight: 600;
 }
-.card-header p, h1{
-    text-align: center;        
+p{
+    color: var(--Grayish);   
 }
-.card-header p{
-    width: 52rem;
+.card-header--description{    
     margin-top: 2rem;
+    font-size: 1.5rem;
+    text-align: center;   
 }
 .card-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;    
+    grid-template-columns: repeat(3, 1fr);    
+    gap: 2rem;    
     place-items: center;
     padding: 2rem;
-    margin-bottom: 10rem;
+    margin-top: 3rem;   
 }
-.grid-card{    
-    margin-block-start: 3rem;    
+.card{
     background-color: var(--LightGray);
     padding: 2rem;   
     border-radius: .5rem;
-    box-shadow: 3px 3px 10px 0px var(--Blue);
+    box-shadow: 3px 3px 10px 0px var(--Grayish);
+    width: 30rem;     
 }
-.grid-card h2{    
-    text-align: left;
+.card--title{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.card--description{
+    font-size: 1.2rem;
+}
+.card-image{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     margin-top: 2rem;
 }
-.card-image {
-    display: flex;
-    justify-content: end;
+.card--light-blue{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border-top: 5px solid var(--Cyan);
 }
-.light-blue{
-    border-top: 4px solid var(--Cyan);
+.card--red{
+    grid-column: 2/3;
+    border-top: 5px solid var(--red);
 }
-.red{
-    border-top: 4px solid var( --red);
+.card--yellow{
+    grid-column: 2/3;
+    border-top: 5px solid var(--Orange);
 }
-.yellow{
-    border-top: 4px solid var( --Orange);
-} 
-.dark-blue{
-    border-top: 4px solid var( --Blue);   
+.card--dark-blue{
+    grid-column: 3/4;
+    grid-row: 1/4;
+    border-top: 5px solid var(--Blue);
 }
+
+
 @media (max-width: 768px){
     .container{       
         margin-block-start: 0;
